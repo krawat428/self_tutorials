@@ -5,15 +5,15 @@ $ git config --global user.email ""
 $ git config --list
 
 #######################################
-$ INITIALIZE A REPOSITORY
+ INITIALIZE A REPOSITORY
 $ git init
 
 #######################################
-$ BEFORE FIRST COMMIT
+ BEFORE FIRST COMMIT
 $ git status
 
 #######################################
-$ ADD GITIGNORE FILE
+ ADD GITIGNORE FILE
 $ vim .gitignore
 
 #######################################
