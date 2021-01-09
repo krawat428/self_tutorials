@@ -1,0 +1,20 @@
+SET CONFIG VALUES
+
+$ git config --global user.name ""
+$ git config --global user.email ""
+$ git config --global --list
+ 
+#############################
+CLONE A REPOSITORY FROM REMOTE(github) TO LOCAL(local system)
+
+git clone https://github.com/krawat428/learning.git
+gits status // TO CHECK IF WE GOT INTO MASTER BRANCH
+
+#############################
+
+git add filename // to add file in staging area
+git commit -m "custom message for commit" // to add file in local repository 
+
+git push origin main // to update local changes to remote(github) repository
+// here origin is github copy of local repository and main refers to default and only branch in remote repository 
+
