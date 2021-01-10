@@ -49,6 +49,16 @@ git diff HEAD HEAD^ // IT MEANS COMPARE LATEST COMMIT WITH LAST-1 COMMIT
 //compare local vs remote branch 
 git diff master origin/master
 
+############################
+//RESET
+git reset --soft HEAD~ // It will remove the last commit from the repository area only.
+git reset --soft ORIG_HEAD // it will undo the changes done by the last command
+
+git reset --mixed HEAD~ // it is a default reset and changes done in staging and repo
+
+git reset --hard HEAD~ // it will effect working,staging and repo
+
+git revert commit_id // it will move to last commit with the deletion of file and create a new commit on the top
 
 ############################ 
 //Branching
@@ -86,4 +96,5 @@ git rebase master // it will fetch latest commit from master branch to current s
 //ABORT A REBASE
 git rebase --abort
 
-
+//REBASE INTERACTIVE
+git rebase -i master
