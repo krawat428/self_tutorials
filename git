@@ -18,3 +18,26 @@ git commit -m "custom message for commit" // to add file in local repository
 git push origin main // to update local changes to remote(github) repository
 // here origin is github copy of local repository and main refers to default and only branch in remote repository 
 
+###############################
+// COMPARISON
+//diff working directory vs stagin area
+git diff
+
+//diff working directory vs git repository last commit
+git diff HEAD
+
+//diff staging area vs git repository last commit
+git diff --staged HEAD
+
+// compare a specific file 
+git diff -- README.md 
+
+//compare commits
+git log --oneline // to get list of all commits
+git diff f99d203 HEAD // WHERE f99d203 is a random commit and HEAD is the lates commit
+
+git diff HEAD HEAD^ // IT MEANS COMPARE LATEST COMMIT WITH LAST-1 COMMIT
+
+
+//compare local vs remote branch 
+git diff master origin/master
