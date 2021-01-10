@@ -5,7 +5,11 @@ $ git config --global user.email ""
 $ git config --global --list
  
 #############################
-CLONE A REPOSITORY FROM REMOTE(github) TO LOCAL(local system)
+//LOGS
+git log --oneline --graph --decorate //list of commits
+
+#############################
+//CLONE A REPOSITORY FROM REMOTE(github) TO LOCAL(local system)
 
 git clone https://github.com/krawat428/learning.git
 gits status // TO CHECK IF WE GOT INTO MASTER BRANCH
@@ -14,6 +18,9 @@ gits status // TO CHECK IF WE GOT INTO MASTER BRANCH
 
 git add filename // to add file in staging area
 git commit -m "custom message for commit" // to add file in local repository 
+
+// DO ADD AND COMMIT AT ONCE
+git commit -am "message"
 
 git push origin main // to update local changes to remote(github) repository
 // here origin is github copy of local repository and main refers to default and only branch in remote repository 
@@ -41,3 +48,42 @@ git diff HEAD HEAD^ // IT MEANS COMPARE LATEST COMMIT WITH LAST-1 COMMIT
 
 //compare local vs remote branch 
 git diff master origin/master
+
+
+############################ 
+//Branching
+git branch -a // get list of all branches local.
+git branch -a // get list of all branches local and remote, * represent current active branch
+
+//create a new branch 
+git branch newbranch
+
+//switching between  branches
+git checkout newbranch
+
+// create and switch to branch at once
+git checkout -b branchname
+
+//rename a branch 
+git branch -m newbranch newbranch2
+
+//delete a branch 
+git branch -d newbranch2 // you can't delete a selected branch so u have to switch to some other branch first.
+
+//MERGE 
+git merge branchname //it will merge to current selected branch 
+
+//DISABLE FAST FORWARD MERGE
+git merge branchname --no-ff
+
+//merge with commit comment 
+git merge branchname -m "message"
+
+############################
+//REBASING
+git rebase master // it will fetch latest commit from master branch to current selected branch 
+
+//ABORT A REBASE
+git rebase --abort
+
+
